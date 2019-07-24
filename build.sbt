@@ -2,7 +2,6 @@ organization in ThisBuild := "com.streetcontxt"
 scalaVersion in ThisBuild := "2.12.8"
 crossScalaVersions in ThisBuild := Seq("2.11.12", "2.12.8", "2.13.0")
 licenses in ThisBuild += ("Apache-2.0", url("https://www.apache.org/licenses/LICENSE-2.0.html"))
-bintrayOrganization in ThisBuild := Some("streetcontxt")
 
 name := "kpl-scala"
 
