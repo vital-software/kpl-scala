@@ -6,16 +6,6 @@ bintrayOrganization in ThisBuild := Some("streetcontxt")
 
 name := "kpl-scala"
 
-val versionPattern = "release-([0-9\\.]*)".r
-version := sys.props
-  .get("CIRCLE_TAG")
-  .orElse(sys.env.get("CIRCLE_TAG"))
-  .flatMap { 
-    case versionPattern(v) => Some(v)
-    case _ => None
-  }
-  .getOrElse("LOCAL-SNAPSHOT")
-
 val slf4j = "org.slf4j" % "slf4j-api" % "1.7.21"
 val amazonKinesisProducer = "com.amazonaws" % "amazon-kinesis-producer" % "0.12.7"
 val typesafeConfig = "com.typesafe" % "config" % "1.3.1"
